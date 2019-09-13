@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+#: exec_target = cli
+
+## reset public folders
+##
+## Usage: fin init-folders
+
+# Abort if anything fails
+set -e
+
+#-------------------------- Settings --------------------------------
+
+# PROJECT_ROOT and DOCROOT are set as env variables in cli
+# public/files public/preview public/uploads
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+
+#-------------------------- END: Settings --------------------------------
+
+#-------------------------- Functions --------------------------------
+
+# Initialize local settings files
+remove_folders ()
+{
+  echo "Delete directories ${DOCROOT_PATH}/files ${DOCROOT_PATH}/preview ${DOCROOT_PATH}/uploads"
+  rm -rf "${DOCROOT_PATH}/files"
+  rm -rf "${DOCROOT_PATH}/preview"
+  rm -rf "${DOCROOT_PATH}/uploads"
+}
+
+init_folders ()
+{
+  echo "Creating directories ${DOCROOT_PATH}/files ${DOCROOT_PATH}/preview ${DOCROOT_PATH}/uploads"
+  mkdir "${DOCROOT_PATH}/files"
+  mkdir "${DOCROOT_PATH}/preview"
+  mkdir "${DOCROOT_PATH}/uploads"
+}
+
+# Fix file/folder permissions
+fix_permissions ()
+{
+	echo "Making directories writable..."
+	chmod 755 "${PROJECT_ROOT}/${DOCROOT}/files"
+  chmod 755 "${PROJECT_ROOT}/${DOCROOT}/preview"
+  chmod 755 "${PROJECT_ROOT}/${DOCROOT}/uploads"
+}
+
+#-------------------------- END: Functions --------------------------------
+
+#-------------------------- Execution --------------------------------
+
+# create and fix permissions of public assets folders
+remove_folders
+init_folders
+fix_permissions
+
+#-------------------------- END: Execution --------------------------------
