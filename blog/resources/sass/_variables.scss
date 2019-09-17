@@ -1,20 +1,68 @@
 
 // Body
-$body-bg: #f8fafc;
+$body-bg: #fff;
 
 // Typography
 $font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+$font-family-lobster: 'Lobster', cursive;
+$font-family-permanent-marker: 'Permanent Marker', cursive;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-family-kaushan: 'Kaushan Script', cursive;
+$font-family-poppins: 'Poppins', sans-serif;
+
+
+
+
 
 // Colors
-$blue: #3490dc;
+$blue: #00c0ff;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66D9b;
 $red: #e3342f;
 $orange: #f6993f;
-$yellow: #ffed4a;
+$yellow: #ffcc00;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$white: #FFFFFF;
+$black: #14182d;
+
+$padding-top: 180px;
+
+$color-primary: $teal;
+$color-secondary: #f9b232;
+
+///////// NAVBAR ////////
+
+$header-color: $color-primary;
+$navbar-text-transfom: capitalize;
+
+//// banner_part ////
+$banner_part_height: 1050px;
+$banner_part_bg: $color-primary;
+$font-banner_part-h1: $font-family-poppins;
+$font-banner_part-h5: $font-family-kaushan;
+$color-text-banner_part: $white;
+
+///search_your_country ///
+$backgroud-search_your_country: $white;
+$font-search_country_h4: $font-family-poppins;
+$color-btn: $black;
+$font-search_country_btn: $font-family-kaushan;
+
+////feature_part/////
+$padding-feature_part: 180px;
+
+////popular_place////
+$padding-top-popular_place: 180px;
+$shadow-single_popular_place: 0px 3px 81px 0px rgba(216, 216, 216, 0.45);
+$background-popular_place: $white;
+$font-btn: $font-family-kaushan;
+
+/////place_details/////
+$padding-place_details: 180px 0px;
+$text-color-place-details: $black;
+$btn-color-place-details: $yellow;
